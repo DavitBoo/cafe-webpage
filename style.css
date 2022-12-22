@@ -9,19 +9,25 @@
     --darker-blue: #006494
 }
 
-
-body, p, ul{
+body{
     margin: 0;
     padding: 0;
     font-family: 'Josefin Sans', sans-serif;
+    overflow-y: hidden;
+}
+
+p, ul{
+    margin: 0;
+    padding: 0;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding: 0;
     margin: 0;
     color: #000;
     text-shadow: 0px 0px 30px var(---light-brown);
+
 }
 
 h2{
@@ -31,6 +37,7 @@ h2{
     font-size: 5rem;
     color: var(--light-blue);
     text-shadow: 0px 0px 30px var(---light-brown);
+    margin-top: 5rem;
 }
 
 
@@ -57,23 +64,6 @@ a{
     z-index: -1;
 }
 
-nav{
-    width: 100%;
-    background-color: var(---light-brown-30);
-    border-bottom: 2px solid var(--darker-blue);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    list-style: none;
-    padding: 2rem 0;
-}
 
 button{
     border: none;
@@ -89,6 +79,7 @@ button{
 
 button:hover{
     color: #000;
+    cursor: pointer;
 }
 
 hr {
@@ -99,10 +90,41 @@ hr {
     border-right: none;
 }
 
+/* **** display none *** */
+.hide{
+    opacity: 0 !important;
+    transition: all .5s;
+}
+
+.not-hide{
+    opacity: 1 !important;
+    transition: all .5s;
+}
+
+nav{
+    width: 100%;
+    background-color: var(---light-brown-30);
+    border-bottom: 2px solid var(--darker-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    height: 5rem;
+
+}
 
 nav ul li a{
     text-underline-offset: 0px;
-    transition: all .3s;
+    transition: all .2s;
     text-transform: uppercase;
 }
 
@@ -110,11 +132,17 @@ nav ul li a:hover{
     text-decoration: underline var(--darker-blue);
     text-decoration-thickness: .125em;
     text-underline-offset: 8px;
+    font-weight: 600   
+}
+
+
+nav ul li a.active{
+    font-weight: 600    ;
 }
 
 .container{
     position: absolute;
-    top: 7rem;
+    top: 5rem;
     left: 0;
     padding-top: 7rem;
     width: 100%;
@@ -122,16 +150,33 @@ nav ul li a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-height: calc(100vh - 17rem);    /*5 top + 5 del footer + 7 del padding*/
+    overflow-y: scroll;
+}
+
+
+/* menu */
+
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.menu-container > p {
+
 }
 
 
 footer{
+    margin-top: 5rem;
     width: 100%;
+    height: 5rem;
     background-color: var(---light-brown-30);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
+    justify-content: center;
     border-top: 2px solid var(--darker-blue);
     position: fixed;
     bottom: 0;
@@ -150,3 +195,5 @@ footer a{
 footer a:hover{
     text-decoration-thickness: .125em;
 }
+
+
