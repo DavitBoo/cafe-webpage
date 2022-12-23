@@ -160,6 +160,9 @@ nav ul li a.active{
     overflow-y: scroll;
 }
 
+
+/* inside container scrollbar */
+
 .container::-webkit-scrollbar {
     width: 7px;
   }
@@ -173,7 +176,6 @@ nav ul li a.active{
     background: var(--darker-blue); 
     outline: 1px solid var(--light-blue);
   }
-
 
 
 
