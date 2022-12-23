@@ -4,7 +4,7 @@
 :root{
     ---light-brown: #DFC9B8;
     ---light-brown-30: #dfc9b85a;
-    ---light-brown-50: #dfc9b887;
+    ---light-brown-50: #dfc9b8a4;
     --brown: #2C1912;
     --light-brown: #BE6E46;
     --light-blue: #0582CA;
@@ -28,7 +28,7 @@ h1{
     padding: 0;
     margin: 0;
     color: #000;
-    text-shadow: 0px 0px 30px var(---light-brown);
+    text-shadow: 0px 0px 30px #fff;
 
 }
 
@@ -37,8 +37,8 @@ h2{
     margin: 0;
     font-family: 'Caramel', cursive;
     font-size: 5rem;
-    color: var(--light-blue);
-    text-shadow: 0px 0px 30px var(---light-brown);
+    color: var(--darker-blue);
+    text-shadow: 0px 0px 30px #fff;
     margin-top: 5rem;
 }
 
@@ -52,6 +52,16 @@ a{
 #content{
     position: relative;
 }
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(---light-brown-50);
+    border-radius: 4px;
+    margin-bottom: 4rem;
+}
+
 
 
 
@@ -73,7 +83,7 @@ a{
 button{
     border: none;
     padding: 0.7rem 1rem;
-    background-color: var(--light-blue);
+    background-color: var(--darker-blue);
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
@@ -169,6 +179,7 @@ nav ul li a.active{
 
 .container::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0);
+    margin-bottom: 2rem;
 }
 
 
@@ -178,6 +189,11 @@ nav ul li a.active{
   }
 
 
+.container > div > p {
+    max-width: 500px;
+    margin: 1rem;
+    text-align: center;
+}
 
 /* menu */
 
@@ -208,7 +224,7 @@ nav ul li a.active{
 }
 
 /* about */
-#about > p {
+#about > div > p {
     padding: 1rem;
     max-width: 600px;
     text-align: center;
