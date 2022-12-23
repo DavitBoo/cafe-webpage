@@ -5,6 +5,9 @@ import { container } from "./container";
 import { menu } from "./menu";
 import { about } from "./about";
 
+import './style.css';
+import coffeeBg from "./coffee-bg.jpg"
+
 const contentDiv = document.getElementById('content')
 
 contentDiv.appendChild(backgroundImage());
