@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caramel&family=Josefin+Sans:wght@500&display=swap');
 
+
 :root{
     ---light-brown: #DFC9B8;
     ---light-brown-30: #dfc9b85a;
@@ -51,6 +52,9 @@ a{
 #content{
     position: relative;
 }
+
+
+
 
 .bg-img{
     height: 100vh;
@@ -155,6 +159,22 @@ nav ul li a.active{
     max-height: calc(100vh - 17rem);    /*5 top + 5 del footer + 7 del padding*/
     overflow-y: scroll;
 }
+
+.container::-webkit-scrollbar {
+    width: 7px;
+  }
+
+.container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+
+.container::-webkit-scrollbar-thumb {
+    background: var(--darker-blue); 
+    outline: 1px solid var(--light-blue);
+  }
+
+
 
 
 /* menu */
